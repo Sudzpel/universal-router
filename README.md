@@ -127,6 +127,7 @@ Developer documentation to give a detailed explanation of the inputs for every c
 1. Clone the repository with all submodules
 
 Clone the repository with:
+
 ```
 git clone --recurse-submodules https://github.com/Uniswap/universal-router.git
 ```
@@ -148,6 +149,7 @@ yarn test
 ```
 
 If you run into an issue on `yarn compile` where it cannot find the dependencies in the lib folder try to clone all the submodules with:
+
 ```
 git submodule update --init --recursive
 ```
@@ -165,18 +167,21 @@ forge install
 forge build
 forge test
 ```
+
 ## Integrating
 
 1. Install the latest version of `@uniswap/universal-router` package.
 2. Add git submodules for contracts that aren't a node package. Make sure there's an empty `.gitmodules` file. Then run:
-    ```bash
-      git submodule add https://github.com/transmissions11/solmate
-      git submodule add https://github.com/Uniswap/permit2
-    ```
+   ```bash
+     git submodule add https://github.com/transmissions11/solmate
+     git submodule add https://github.com/Uniswap/permit2
+   ```
 3. You should now be able to import contracts from universal-router and compile.
 
 ## Contributions
+
 Before you submit your PR, run all of the following and commit the changes:
+
 ```bash
 # make sure all tests pass this will also update gas snapshots
 yarn test:all
@@ -186,6 +191,7 @@ yarn prettier:fix
 ```
 
 If you are only concerned with investigating gas diffs, you can run this command to only run gas tests
+
 ```bash
 yarn test:gas
 ```
@@ -212,6 +218,18 @@ forge script --broadcast \
 script/deployParameters/Deploy<network>.s.sol:Deploy<network> \
 --etherscan-api-key <ETHERSCAN-API-KEY> \
 --verify
+```
+
+### Monad Deployment
+
+```console
+forge script --broadcast \
+--rpc-url $RPC_API_KEY \
+--private-key $PRIVATE_KEY \
+--sig 'run()' \
+script/deployParameters/DeployMonad.s.sol:DeployMonad --etherscan-api-key $ETHERSCAN_API \
+--verify
+
 ```
 
 #### To Deploy Permit2 Alongside UniversalRouter
