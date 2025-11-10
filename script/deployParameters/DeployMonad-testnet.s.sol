@@ -8,13 +8,13 @@ contract DeployMonad is DeployUniversalRouter {
     function setUp() public override {
         params = RouterParameters({
             permit2: 0x000000000022D473030F116dDEE9F6B43aC78BA3,
-            weth9: 0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A,
-            v2Factory: 0xCe104732685B9D7b2F07A09d828F6b19786cdA32,
-            v3Factory: 0x30Db57A29ACf3641dfc3885AF2e5f1F5A408D9CB,
-            pairInitCodeHash: 0x0757d600d332ab414bff776d7ba09eb55c029272b57d995e41f571edfb1f6fbe,
-            poolInitCodeHash: 0x30203aa225dc2b1c892323df608368caf4846dfb459fe17cd3ddccb1f4c68449,
+            weth9: 0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701,
+            v2Factory: 0xe26dd94f67Ca3615fcaF6062750147F37Df84F7a,
+            v3Factory: 0xD404cbEE8213aD72f545c07fA47c320CAB86677b,
+            pairInitCodeHash: 0x01fa70eb1d54eb2007acbf24d7a22d171e4d7d83f736b11d5628c4c35a82a2f0,
+            poolInitCodeHash: 0xc0ccad81c22e0bf0c1c263ac97e317437010ea69d9ee4ceb18ceda22c27098ee,
             v4PoolManager: address(0),
-            v3NFTPositionManager: 0x5161ebb7E418C593553D0dA287ad54D128aa2B9E,
+            v3NFTPositionManager: 0x792116870fB00965ebC81F05F4B9a364aF9d2EFe,
             v4PositionManager: address(0)
         });
 
