@@ -18,6 +18,6 @@ contract DeployMonad is DeployUniversalRouter {
             v4PositionManager: address(0)
         });
 
-        unsupported = 0x76D631990d505E4e5b432EEDB852A60897824D68;
+        unsupported = address(0);
     }
 }
